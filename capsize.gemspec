@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{capsize}
-  s.version = "0.5.2"
+  s.version = "0.5.3"
 
   s.specification_version = 2 if s.respond_to? :specification_version=
 
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
 
   s.add_dependency(%q<capistrano>, [">= 2.3.0"])
-  s.add_dependency(%q<amazon-ec2>, [">= 0.2.6"])
+  s.add_dependency(%q<amazon-ec2>, [">= 0.7.9"])
   s.add_dependency(%q<rcov>, [">= 0.8.1.2.0"])
   s.add_dependency(%q<SQS>, [">= 0.1.5"])
   s.add_dependency(%q<builder>, [">= 2.1.2"])

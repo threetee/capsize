@@ -215,7 +215,7 @@ Capistrano::Configuration.instance.load do
           # override the roles set in deploy.rb with the server instance started here.
           # This is temporary and only remains defined for the length of this
           # capistrano run!
-          #set(:dns_name, response.reservationSet.item[0].instancesSet.item[0].dnsName)
+          set(:dns_name, response.reservationSet.item[0].instancesSet.item[0].dnsName)
           #set_default_roles_to_target_role
 
         rescue Exception => e

@@ -60,7 +60,7 @@ module Capsize
       options = {:key_dir => nil, :key_name => nil}.merge(options)
       key_dir = options[:key_dir] || get(:key_dir) || get(:capsize_secure_config_dir)
       key_name = options[:key_name] || get(:key_name)
-      return key_file = [key_dir, "id_rsa-" + key_name].join('/')
+      return key_file = [key_dir, "" + key_name + ".pem"].join('/')
     end
 
 
@@ -216,7 +216,7 @@ module Capsize
                 }.merge(options)
 
       # What security group should we run as?
-      options[:group_id] = (options[:group_name] || get(:group_name) || "").split(',')
+      options[:security_group] = (options[:group_name] || get(:group_name) || "").split(',')
 
       # We want to run the new instance using our public/private keypair if
       # one is defined for this application or of the user has explicitly passed

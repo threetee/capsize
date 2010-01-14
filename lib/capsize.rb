@@ -6,7 +6,7 @@
   fileutils
   builder
   capistrano
-  EC2
+  aws
   sqs
   capsize/version
   capsize/capsize.rb
@@ -24,3 +24,5 @@
     exit
   end
 }
+
+include AWS
