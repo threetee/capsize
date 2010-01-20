@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{capsize}
-  s.version = "0.5.3"
+  s.version = "0.5.4"
 
   s.specification_version = 2 if s.respond_to? :specification_version=
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Capsize is a Capistrano plugin used to provide an easy way to manage and script interaction with the Amazon EC2 service using the amazon-ec2 Ruby gem.}
   s.email = %q{jnewland@gmail.com}
   s.extra_rdoc_files = ["README.textile"]
-  s.files = ["History.txt", "License.txt", "Manifest.txt", "README.textile", "Rakefile", "config/hoe.rb", "config/requirements.rb", "examples/capsize.yml.template", "examples/deploy.rb", "lib/capsize.rb", "lib/capsize/capsize.rb", "lib/capsize/configuration.rb", "lib/capsize/ec2.rb", "lib/capsize/ec2_plugin.rb", "lib/capsize/meta_tasks.rb", "lib/capsize/sqs.rb", "lib/capsize/sqs_plugin.rb", "lib/capsize/version.rb", "setup.rb", "tasks/deployment.rake", "tasks/environment.rake", "tasks/website.rake", "test/test_capsize.rb", "test/test_helper.rb"]
+  s.files = ["History.txt", "License.txt", "Manifest.txt", "README.textile", "Rakefile", "config/hoe.rb", "config/requirements.rb", "examples/capsize.yml.template", "examples/deploy.rb", "lib/capsize.rb", "lib/capsize/capsize.rb", "lib/capsize/configuration.rb", "lib/capsize/ec2.rb", "lib/capsize/ec2_plugin.rb","lib/capsize/elb.rb", "lib/capsize/elb_plugin.rb", "lib/capsize/meta_tasks.rb", "lib/capsize/sqs.rb", "lib/capsize/sqs_plugin.rb", "lib/capsize/version.rb", "setup.rb", "tasks/deployment.rake", "tasks/environment.rake", "tasks/website.rake", "test/test_capsize.rb", "test/test_helper.rb"]
   s.has_rdoc = false
   s.homepage = %q{http://github.com/jnewland/capsize}
   s.require_paths = ["lib"]

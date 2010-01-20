@@ -216,6 +216,8 @@ Capistrano::Configuration.instance.load do
           # This is temporary and only remains defined for the length of this
           # capistrano run!
           set(:dns_name, response.reservationSet.item[0].instancesSet.item[0].dnsName)
+          set(:instance_id, response.reservationSet.item[0].instancesSet.item[0].instanceId)
+          
           #set_default_roles_to_target_role
 
         rescue Exception => e
