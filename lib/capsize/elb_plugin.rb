@@ -30,6 +30,17 @@ module Capsize
         end
     end
     
+    
+    def deregister_instances_from_load_balancer(params)
+       begin
+          amazon = connect()
+          result = amazon.deregister_instances_from_load_balancer(params)
+        rescue Exception => e
+          puts "The attempt to register your instances to the load balancer failed with error : " + e
+          raise e
+        end
+    end
+    
   end
 end
 Capistrano.plugin :capsize_elb, Capsize::CapsizeELB
