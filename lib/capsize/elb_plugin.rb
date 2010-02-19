@@ -13,7 +13,7 @@ module Capsize
       raise Exception, "You must have an :aws_secret_access_key defined in your config." if fetch(:aws_secret_access_key).nil? || fetch(:aws_secret_access_key).empty?
 
       begin
-        return amazon_elb = AWS::ELB::Base.new(:access_key_id => get(:aws_access_key_id), :secret_access_key => get(:aws_secret_access_key))
+        return amazon_elb = AWS::ELB::Base.new(:access_key_id => get(:aws_access_key_id), :secret_access_key => get(:aws_secret_access_key), :server => get(:elb_url))
       rescue Exception => e
         puts "Your EC2::Base authentication setup failed with the following message : " + e
         raise e
@@ -36,7 +36,7 @@ module Capsize
           amazon = connect()
           result = amazon.deregister_instances_from_load_balancer(params)
         rescue Exception => e
-          puts "The attempt to register your instances to the load balancer failed with error : " + e
+          puts "The attempt to deregister your instances to the load balancer failed with error : " + e
           raise e
         end
     end
